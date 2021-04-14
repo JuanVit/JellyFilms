@@ -36,18 +36,16 @@ function agregarAlCarrito(precio){
 }
 
 function calcularCuotas(precio){
-    let cuotas = Number (prompt ("Elija la cantidad de cuotas (3, 6 o 12)"));
-    let precioImpuesto = precio * 1.30;
-    switch(cuotas){
-        case 3 : let precioFinal = precioImpuesto / 3;
-            alert(`Son 3 cuotas de $ ${precioFinal}`);
-    }
-    switch(cuotas){
-        case 6 : let precioFinal = precioImpuesto / 6;
-            alert(`Son 6 cuotas de $ ${precioFinal}`);
-    }
-    switch(cuotas){
-        case 12 : let precioFinal = precioImpuesto / 12;
-            alert(`Son 12 cuotas de $ ${precioFinal}`);
+    let precioImpuesto = precio * 1.3;
+    let cantidadCuotas = Number(prompt(`Indique la cantidad de cuotas : 3, 6, o 12 `))
+    switch(cantidadCuotas){
+        case 3 : alert(("Son 3 cuotas de $ ") + (precioImpuesto / 3));
+        break;
+        case 6 : alert(("Son 6 cuotas de $ ") + (precioImpuesto / 6));
+        break;
+        case 12 : alert(("Son 12 cuotas de $ ") + (precioImpuesto / 12));
+        break;
+        default: alert(`No ha ingresado una cantidad de cuotas valida`)
     }
 }
+

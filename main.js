@@ -17,8 +17,8 @@ for (let i = 0; i < nombres.length; i++){
                             </h4>
                             <h5>$ ${precios[i]}</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                            <button class="btn-primary" onclick=${agregarAlCarrito(precios[i])}>Agregar al Carrito</button>
-                            <button class="btn-primary mt-1" onclick = ${calcularCuotas(precios[i])}>Calcular cuotas</button>
+                            <button class="btn-primary" onclick= agregarAlCarrito(${precios[i]})>Agregar al Carrito</button>
+                            <button class="btn-primary mt-1" onclick = calcularCuotas(${precios[i]})>Calcular cuotas</button>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -31,19 +31,38 @@ document.getElementById("productos").innerHTML = cardsHome;
 function agregarAlCarrito(precio){
     totalCarrito += precio;
 
-    document.write(`El total del carrito es de $ ${totalCarrito}`);
+    console.log(`El total del carrito es de $ ${totalCarrito}`);
 }
 
 function calcularCuotas(precio){
-    let precioImpuesto = precio * 1.3;
-    let cantidadCuotas = Number(prompt(`Indique la cantidad de cuotas : 3, 6, o 12 `))
-    switch(cantidadCuotas){
-        case 3 : alert(("Son 3 cuotas de $ ") + (precioImpuesto / 3));
+    let cuotas = cantidadCuotas();
+    let precioImpuesto = calcularImpuestos(cuotas, precio);
+    switch(cuotas){
+        case 3 : console.log(("Son 3 cuotas de $ ") + (precioImpuesto / 3));
         break;
-        case 6 : alert(("Son 6 cuotas de $ ") + (precioImpuesto / 6));
+        case 6 : console.log(("Son 6 cuotas de $ ") + (precioImpuesto / 6));
         break;
-        case 12 : alert(("Son 12 cuotas de $ ") + (precioImpuesto / 12));
+        case 12 : console.log(("Son 12 cuotas de $ ") + (precioImpuesto / 12));
         break;
-        default: alert(`No ha ingresado una cantidad de cuotas valida`)
+        default: console.log(`No ha ingresado una cantidad de cuotas valida`)
     }
+}
+
+function cantidadCuotas(){
+    let cantidadCuotas = Number(prompt(`Ingrese la cantidad de cuotas (3, 6 o 12)`))
+    return cantidadCuotas;
+}
+
+function calcularImpuestos(cuotas, precio){
+    let calcularImpuestos = 0 
+    if (cuotas == 3){
+        calcularImpuestos+= precio * 1.3;
+    }
+    else if (cuotas == 6){
+        calcularImpuestos+= precio * 1.4;
+    }
+    else{
+        calcularImpuestos+= precio * 1.5;
+    }
+    return calcularImpuestos;
 }

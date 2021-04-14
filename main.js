@@ -26,7 +26,6 @@ for (let i = 0; i < nombres.length; i++){
                     </div>
                 </div>`   
 }
-
 document.getElementById("productos").innerHTML = cardsHome;
 
 function agregarAlCarrito(precio){
@@ -48,4 +47,3 @@ function calcularCuotas(precio){
         default: alert(`No ha ingresado una cantidad de cuotas valida`)
     }
 }
-

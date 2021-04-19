@@ -19,23 +19,21 @@ const productoUno = new producto(`God of War`, 2000, `https://images-na.ssl-imag
 const productoDos = new producto(`GTA V`, 1600, `https://images-na.ssl-images-amazon.com/images/I/916T5H6sCtL._SL1500_.jpg` );
 const productoTres = new producto(`Call of Duty: Modern Warfare`, 4500, 'https://images-na.ssl-images-amazon.com/images/I/81n2llGXyiL._SL1500_.jpg');
 
-const productoImagen = [productoUno.imagen, productoDos.imagen, productoTres.imagen];
-const productoNombre = [productoUno.nombre, productoDos.nombre, productoTres.nombre];
-const productoPrecio = [productoUno.precio, productoDos.precio, productoTres.precio];
+const productos = [productoUno, productoDos, productoTres];
 //Productos Home
 
 for (let i = 0; i < nombres.length; i++){
     cardsHome+= `<div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src=${productoImagen[i]} alt=""></a>
+                        <a href="#"><img class="card-img-top" src=${productos[i].imagen} alt=""></a>
                         <div class="card-body">
                             <h4>
-                                ${productoNombre[i]}
+                                ${productos[i].nombre}
                             </h4>
-                            <h5>$ ${productoPrecio[i]}</h5>
+                            <h5>$ ${productos[i].precio}</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                            <button class="btn-primary" onclick= agregarAlCarrito(${productoPrecio[i]})>Agregar al Carrito</button>
-                            <button class="btn-primary mt-1" onclick = calcularCuotas(${productoPrecio[i]})>Calcular cuotas</button>
+                            <button class="btn-primary" onclick= agregarAlCarrito(${productos[i].precio})>Agregar al Carrito</button>
+                            <button class="btn-primary mt-1" onclick = calcularCuotas(${productos[i].precio})>Calcular cuotas</button>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>

@@ -1,8 +1,3 @@
-
-
-let nombres = ["God of War", "GTA V", "Call of Duty: Modern Warafare"];
-let precios = [2000, 1600, 4500];
-let imagenes = ['https://images-na.ssl-images-amazon.com/images/I/813xlI-NGpL._SL1500_.jpg', 'https://images-na.ssl-images-amazon.com/images/I/916T5H6sCtL._SL1500_.jpg', 'https://images-na.ssl-images-amazon.com/images/I/81n2llGXyiL._SL1500_.jpg'];
 let cardsHome = ``;
 let totalCarrito = 0;
 
@@ -42,6 +37,8 @@ for (let i = 0; i < nombres.length; i++){
                 </div>`   
 }
 document.getElementById("productos").innerHTML = cardsHome;
+
+// Funciones
 
 function agregarAlCarrito(precio){
     totalCarrito += precio;

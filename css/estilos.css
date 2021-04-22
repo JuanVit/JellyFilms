@@ -1,0 +1,33 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #282828;
+  color: white;
+}
+
+.bg-dark{
+  background-color: #282828 !important;
+}
+.page-content-one .carousel-inner img{
+  max-height: 700px;
+}
+
+.section-peliculas-title{
+  font-size: 30px;
+}
+
+.card{
+  border: none;
+  background-color: #282828;
+}
+.card .card-img-top{
+  height: 400px;
+}
+.button-generic{
+  padding: 10px;
+  border: none;
+  background-color: #696969;
+}

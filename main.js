@@ -1,52 +1,56 @@
-let cardsHome = ``;
+let acumulador = ``;
 let totalCarrito = 0;
 
 //Objetos
 class producto{
-    constructor(nombre, precio, imagen){
+    constructor(nombre, precio, imagen, genero){
         this.nombre = nombre;
         this.precio = precio; 
-        this.imagen = imagen; 
+        this.imagen = imagen;
+        this.genero = genero;  
     }
 }
 
-const productoUno = new producto(`God of War`, 2000, `https://images-na.ssl-images-amazon.com/images/I/813xlI-NGpL._SL1500_.jpg`);
-const productoDos = new producto(`GTA V`, 1600, `https://images-na.ssl-images-amazon.com/images/I/916T5H6sCtL._SL1500_.jpg` );
-const productoTres = new producto(`Call of Duty: Modern Warfare`, 4500, 'https://images-na.ssl-images-amazon.com/images/I/81n2llGXyiL._SL1500_.jpg');
+const productoUno = new producto(`Spider-Man: Far From Home`, 2000, `https://i.pinimg.com/originals/eb/f1/47/ebf147371216617098a1fa94e2a121e6.jpg`, `aventura`);
+const productoDos = new producto(`Nobody`, 1600, `https://www.joblo.com/assets/images/joblo/posters/2021/01/nobody-NBD_Teaser1Sheet5_rgb.jpg`, `accion` );
+const productoTres = new producto(`John Wick: Parabellum`, 4500, 'https://i0.wp.com/noescinetodoloquereluce.com/wp-content/uploads/2019/05/cartel-final-final-JOHN-WICK-3.jpg?resize=800%2C1153&ssl=1', `accion`);
 
 const productos = [productoUno, productoDos, productoTres];
+
 //Productos Home
 
-for (let i = 0; i < nombres.length; i++){
-    cardsHome+= `<div class="col-lg-4 col-md-6 mb-4">
+productos.forEach((producto) => {
+    acumulador+= `<div class="col-lg-2 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src=${productos[i].imagen} alt=""></a>
+                        <a href="#"><img class="card-img-top" src=${producto.imagen} alt=""></a>
                         <div class="card-body">
                             <h4>
-                                ${productos[i].nombre}
+                                ${producto.nombre}
                             </h4>
-                            <h5>$ ${productos[i].precio}</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                            <button class="btn-primary" onclick= agregarAlCarrito(${productos[i].precio})>Agregar al Carrito</button>
-                            <button class="btn-primary mt-1" onclick = calcularCuotas(${productos[i].precio})>Calcular cuotas</button>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            <h5>${producto.genero}</h5>
+                            <h6>$ ${producto.precio}</h6>
+                            <button class="btn-primary button-generic" onclick= agregarAlCarrito(${producto.precio})>Comprar</button>
+                            <button class="btn-primary mt-1 button-generic" onclick = calcularCuotas(${producto.precio})>Calcular cuotas</button>
                         </div>
                     </div>
                 </div>`   
-}
-document.getElementById("productos").innerHTML = cardsHome;
+})
+document.getElementById("productos").innerHTML = acumulador;
 
 // Funciones
 
-function agregarAlCarrito(precio){
-    totalCarrito += precio;
 
+let filtrarGenero = (genero) => {
+    let filtroAccion = productos.filter (el => el.genero === genero)
+    console.log(filtroAccion);
+}
+
+let agregarAlCarrito = (precio) => {
+    totalCarrito += precio;
     console.log(`El total del carrito es de $ ${totalCarrito}`);
 }
 
-function calcularCuotas(precio){
+let calcularCuotas= precio => {
     let cuotas = cantidadCuotas();
     let precioImpuesto = calcularImpuestos(cuotas, precio);
     switch(cuotas){
@@ -60,12 +64,13 @@ function calcularCuotas(precio){
     }
 }
 
-function cantidadCuotas(){
-    let cantidadCuotas = Number(prompt(`Ingrese la cantidad de cuotas (3, 6 o 12)`))
+let cantidadCuotas = () =>{
+    let cantidadCuotas = Number(prompt(`Ingrese la cantidad de cuotas (3, 6 o 12)`));
     return cantidadCuotas;
 }
 
-function calcularImpuestos(cuotas, precio){
+
+let calcularImpuestos = (cuotas, precio) => {
     let calcularImpuestos = 0 
     if (cuotas == 3){
         calcularImpuestos+= precio * 1.3;

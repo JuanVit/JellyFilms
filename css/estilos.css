@@ -1,33 +1,64 @@
-*{
+* {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #282828;
+  background-color: #0f171e; }
+
+.bg-dark {
+  background-color: #0f171e !important; }
+  .bg-dark .navBar-logo {
+    font-size: 26px;
+    color: rgba(242, 244, 246, 0.9);
+    padding-right: 10px; }
+  .bg-dark .navbar-brand {
+    font-size: 23px;
+    color: rgba(242, 244, 246, 0.9); }
+  .bg-dark .dropdown-menu {
+    background: #0f171e; }
+    .bg-dark .dropdown-menu :hover {
+      background: #0f171e; }
+    .bg-dark .dropdown-menu .dropdown-item {
+      color: rgba(242, 244, 246, 0.9); }
+      .bg-dark .dropdown-menu .dropdown-item :hover {
+        color: rgba(242, 244, 246, 0.9); }
+  .bg-dark .search-bar {
+    background: transparent;
+    color: rgba(242, 244, 246, 0.9);
+    border: 1px solid rgba(242, 244, 246, 0.9);
+    border-radius: 0;
+    outline: none; }
+  .bg-dark .btn-navBar {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(242, 244, 246, 0.9); }
+
+.main-container .button-genero {
+  color: rgba(242, 244, 246, 0.9);
+  font-size: 25px;
+  border: none;
+  background: transparent;
+  margin-left: 20px;
+  padding-bottom: 30px; }
+
+.main-container .section-peliculas-title {
   color: white;
-}
+  font-size: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px; }
 
-.bg-dark{
-  background-color: #282828 !important;
-}
-.page-content-one .carousel-inner img{
-  max-height: 700px;
-}
-
-.section-peliculas-title{
-  font-size: 30px;
-}
-
-.card{
+.main-container #productos .card {
+  background: transparent;
   border: none;
-  background-color: #282828;
-}
-.card .card-img-top{
-  height: 400px;
-}
-.button-generic{
-  padding: 10px;
-  border: none;
-  background-color: #696969;
-}
+  color: rgba(242, 244, 246, 0.9); }
+  .main-container #productos .card .card-img-top {
+    height: 300px; }
+  .main-container #productos .card .card-body .button-card {
+    display: flex;
+    align-self: center;
+    padding: 10px;
+    border: solid 1px rgba(242, 244, 246, 0.9);
+    background: transparent;
+    color: rgba(242, 244, 246, 0.9);
+    outline: none; }

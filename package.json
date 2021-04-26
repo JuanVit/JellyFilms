@@ -1,44 +1,25 @@
 {
-  "title": "Shop Homepage",
-  "name": "startbootstrap-shop-homepage",
-  "version": "4.2.3",
+  "name": "proyecto-final-coder",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "gulp watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "description": "A shop homepage HTML template built with Bootstrap",
-  "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
-  ],
-  "homepage": "https://startbootstrap.com/template/shop-homepage",
-  "bugs": {
-    "url": "https://github.com/StartBootstrap/startbootstrap-shop-homepage/issues",
-    "email": "feedback@startbootstrap.com"
-  },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (https://davidmiller.io/)"
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StartBootstrap/startbootstrap-shop-homepage.git"
+    "url": "git+https://github.com/JuanVit/Proyecto-Final-Coder-JS.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanVit/Proyecto-Final-Coder-JS/issues"
+  },
+  "homepage": "https://github.com/JuanVit/Proyecto-Final-Coder-JS#readme",
   "dependencies": {
-    "bootstrap": "4.5.3",
-    "jquery": "3.5.1",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7"
   },
-  "devDependencies": {
-    "browser-sync": "2.26.13",
-    "del": "6.0.0",
-    "gulp": "4.0.2",
-    "merge-stream": "2.0.0"
-  },
-  "main": "main.js"
+  "description": ""
 }

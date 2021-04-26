@@ -1,0 +1,88 @@
+
+$color-letra: rgba(242,244,246,.9);
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #0f171e;
+}
+
+.bg-dark{
+    background-color: #0f171e !important;
+    .navBar-logo{
+        font-size: 26px;
+        color: $color-letra;
+        padding-right: 10px;
+    }
+    .navbar-brand{
+        font-size: 23px;
+        color: $color-letra;
+    }
+    .dropdown-menu{
+        background: #0f171e;
+        :hover{
+            background:#0f171e ;
+        }
+        .dropdown-item{
+            color: $color-letra;
+            :hover{
+                color: $color-letra;
+            }
+        }
+    }
+    .search-bar{
+        background: transparent;
+        color: $color-letra;
+        border: 1px solid $color-letra;
+        border-radius: 0;
+        outline: none;
+    }
+    .btn-navBar{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $color-letra;
+    }
+}
+
+.main-container{
+    .button-genero{
+        color: $color-letra;
+        font-size: 25px;
+        border: none;
+        background: transparent;
+        margin-left:20px;
+        padding-bottom: 30px;;
+    }
+    .section-peliculas-title{
+        color: white;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    #productos{
+        .card{
+            background: transparent;
+            border: none;
+            color: $color-letra;
+            .card-img-top{
+                height:300px;
+            }
+            .card-body{
+                .card-title{
+                }
+                .button-card{
+                    display: flex;
+                    align-self: center;
+                    padding:10px;
+                    border: solid 1px $color-letra;
+                    background: transparent;
+                    color: $color-letra;
+                    outline: none;
+                }
+            }
+        }
+    }
+}

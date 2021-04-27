@@ -32,7 +32,8 @@ body {
     background: transparent;
     border: none;
     outline: none;
-    color: rgba(242, 244, 246, 0.9); }
+    color: rgba(242, 244, 246, 0.9);
+    font-weight: 500; }
 
 .main-container .button-genero {
   color: rgba(242, 244, 246, 0.9);

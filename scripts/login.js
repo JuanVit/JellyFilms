@@ -2,7 +2,7 @@
 let login= () => {
     let username = localStorage.getItem(`username`);
     let password = localStorage.getItem(`password`);
-    if(username && password){
+    if(username != null && password != null){
         alert(`Bienvenido ${username}`);
     }
     else{

@@ -1,6 +1,8 @@
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Antonio', sans-serif;
+  font-family: 'Montserrat', sans-serif; }
 
 body {
   background-color: #0f171e; }
@@ -22,18 +24,39 @@ body {
       color: rgba(242, 244, 246, 0.9); }
       .bg-dark .dropdown-menu .dropdown-item :hover {
         color: rgba(242, 244, 246, 0.9); }
-  .bg-dark .search-bar {
+  .bg-dark .searchBar {
     background: transparent;
     color: rgba(242, 244, 246, 0.9);
-    border: 1px solid rgba(242, 244, 246, 0.9);
-    border-radius: 0;
-    outline: none; }
-  .bg-dark .btn-navBar {
+    border: 0.5px rgba(242, 244, 246, 0.9);
+    outline: none;
+    border-radius: none; }
+  .bg-dark .btn-iniciar {
     background: transparent;
     border: none;
     outline: none;
     color: rgba(242, 244, 246, 0.9);
-    font-weight: 500; }
+    font-weight: 500;
+    margin: 10px, 0px; }
+    .bg-dark .btn-iniciar a {
+      color: rgba(242, 244, 246, 0.9); }
+  .bg-dark .btn-cerrar {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(242, 244, 246, 0.9);
+    font-weight: 500;
+    padding-right: 20px; }
+
+.loginForm {
+  margin-top: 100px;
+  padding: 20px; }
+  .loginForm .formInput {
+    padding: 10px;
+    margin: 10px;
+    border: none; }
+  .loginForm .formSubmit {
+    padding: 10px;
+    margin-top: 20px; }
 
 .main-container .button-genero {
   color: rgba(242, 244, 246, 0.9);

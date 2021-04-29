@@ -4,10 +4,14 @@ $color-letra: rgba(242,244,246,.9);
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Antonio', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
     background-color: #0f171e;
 }
+
+//NAVBAR//
 
 .bg-dark{
     background-color: #0f171e !important;
@@ -32,21 +36,50 @@ body{
             }
         }
     }
-    .search-bar{
+    .searchBar{
         background: transparent;
         color: $color-letra;
-        border: 1px solid $color-letra;
-        border-radius: 0;
+        border: .5px  $color-letra;
         outline: none;
+        border-radius: none;
     }
-    .btn-navBar{
+    .btn-iniciar{
         background: transparent;
         border: none;
         outline: none;
         color: $color-letra;
-        font-weight: 500;
+        font-weight: 500;;
+        margin:10px, 0px;
+        a{
+            color:$color-letra;
+        }
+    }
+    .btn-cerrar{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $color-letra;
+        font-weight: 500;;
+        padding-right: 20px;
     }
 }
+
+// LOGIN FORM //
+
+    .loginForm{
+        margin-top: 100px;
+        padding: 20px;
+        .formInput{
+            padding: 10px;
+            margin: 10px;
+            border: none;
+        }
+        .formSubmit{
+            padding:10px;
+            margin-top: 20px;
+        }
+    }
+
 
 .main-container{
     .button-genero{

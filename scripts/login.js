@@ -1,32 +1,34 @@
 
-let login= () => {
-    let username = localStorage.getItem(`username`);
-    let password = localStorage.getItem(`password`);
-    if(username != null && password != null){
-        loggedIn(username);
+let welcomeUser = () =>{
+    username = localStorage.getItem(`username`);
+    password = localStorage.getItem(`password`);
+    if((username != null) && (password != null)){
+        let userLogged = document.getElementById(`usuarioLoggeado`);
+        userLogged.innerHTML = `<div class = "d-flex py-0"><i class="fas fa-user pr-2"></i><h1 class="pr-4 my-0" style="color: white; font-size: 16px"> ${username}</h1></div></div>`}
     }
-    else{
-        ingresarUsuario()
-    }
-}
+welcomeUser()   
 
 let ingresarUsuario = () => {
-    username = prompt(`Ingrese su usuario`)
-    if ((username != null) && (username != ``)) {
+    let username = document.getElementById(`inputUsuario`).value;
+    let password = document.getElementById(`inputPassword`).value;
+    if((username != null && password != null) && (username != `` && password != ``)){
         localStorage.setItem(`username`, username);
-        let password = prompt(`Ingrese su contraseña`);
-        if ((password != null) && (password != ``)) {
-            localStorage.setItem(`password`, password);
-            login();
-        } else{
-            alert(`No ha ingresado una contraseña valida`)
-        }
-    } else{
-        alert(`No ha ingresado un usuario válido`);
+        localStorage.setItem(`password`, password);
+        backIndex()
+    } else {
+        alert(`No ha ingresado los datos correctamente`)
     }
 }
 
-let loggedIn = (username) =>{
-    let userLogged = document.getElementById(`usuarioLoggeado`);
-    userLogged.innerHTML = `<h1 class="pr-5" style="color: white; font-size: 23px">${username}</h1>`;
+let backIndex = () =>{
+    window.location.href = "index.html";
 }
+
+let cerrarSesion = () =>{
+    localStorage.removeItem(`password`);
+    localStorage.removeItem(`username`);
+    location.reload();
+}
+
+
+

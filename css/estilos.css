@@ -2,22 +2,25 @@
   padding: 0;
   margin: 0;
   font-family: 'Antonio', sans-serif;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  outline: none; }
 
 body {
-  background-color: #0f171e; }
+  background: #141414; }
 
 .bg-dark {
-  background-color: #0f171e !important; }
+  background-color: #141414 !important; }
   .bg-dark .navBar-logo {
-    font-size: 26px;
+    font-size: 20px;
     color: rgba(242, 244, 246, 0.9);
     padding-right: 10px; }
   .bg-dark .navbar-brand {
-    font-size: 23px;
-    color: rgba(242, 244, 246, 0.9); }
+    font-size: 16px;
+    color: rgba(242, 244, 246, 0.9);
+    font-family: 'Bebas Neue', cursive; }
   .bg-dark .dropdown-menu {
-    background: #0f171e; }
+    background: #0f171e;
+    font-size: 15px; }
     .bg-dark .dropdown-menu :hover {
       background: #0f171e; }
     .bg-dark .dropdown-menu .dropdown-item {
@@ -29,14 +32,16 @@ body {
     color: rgba(242, 244, 246, 0.9);
     border: 0.5px rgba(242, 244, 246, 0.9);
     outline: none;
-    border-radius: none; }
+    border-radius: none;
+    font-size: 15px; }
   .bg-dark .btn-iniciar {
     background: transparent;
     border: none;
     outline: none;
     color: rgba(242, 244, 246, 0.9);
     font-weight: 500;
-    margin: 10px, 0px; }
+    margin: 10px, 0px;
+    font-size: 15px; }
     .bg-dark .btn-iniciar a {
       color: rgba(242, 244, 246, 0.9); }
   .bg-dark .btn-cerrar {
@@ -45,7 +50,8 @@ body {
     outline: none;
     color: rgba(242, 244, 246, 0.9);
     font-weight: 500;
-    padding-right: 20px; }
+    padding-right: 20px;
+    font-size: 15px; }
 
 .loginForm {
   margin-top: 100px;
@@ -58,31 +64,25 @@ body {
     padding: 10px;
     margin-top: 20px; }
 
-.main-container .button-genero {
-  color: rgba(242, 244, 246, 0.9);
-  font-size: 25px;
-  border: none;
-  background: transparent;
+.main-container .menuFilterGenero {
   margin-left: 20px;
-  padding-bottom: 30px; }
+  color: rgba(242, 244, 246, 0.9);
+  background-color: #0f171e;
+  padding: 5px;
+  border: none;
+  font-size: 15px; }
 
 .main-container .section-peliculas-title {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   padding-left: 20px;
   padding-bottom: 20px; }
 
-.main-container #productos .card {
+.main-container #contenedorCards .card-movie {
   background: transparent;
   border: none;
   color: rgba(242, 244, 246, 0.9); }
-  .main-container #productos .card .card-img-top {
-    height: 300px; }
-  .main-container #productos .card .card-body .button-card {
-    display: flex;
-    align-self: center;
-    padding: 10px;
-    border: solid 1px rgba(242, 244, 246, 0.9);
-    background: transparent;
-    color: rgba(242, 244, 246, 0.9);
-    outline: none; }
+  .main-container #contenedorCards .card-movie .cardImg {
+    height: 300px;
+    width: 100%;
+    cursor: pointer; }

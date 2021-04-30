@@ -19,36 +19,26 @@ const productos = [productoUno, productoDos, productoTres];
 
 //Productos Home
 
-productos.forEach((producto) => {
-    acumulador+= `<div class="col-lg-2 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src=${producto.imagen} alt=""></a>
-                        <div class="card-body">
-                            <h4 class= "card-title">
-                                ${producto.nombre}
-                            </h4>
-                            <h5>${producto.genero}</h5>
-                            <h6>$ ${producto.precio}</h6>
-                            <button class="button-card" onclick= agregarAlCarrito(${producto.precio})>Comprar</button>
-                            <button class="button-card mt-1" onclick = calcularCuotas(${producto.precio})>Calcular cuotas</button>
-                        </div>
-                    </div>
-                </div>`   
-})
-document.getElementById("productos").innerHTML = acumulador;
+    let mostrarCards = (array) =>{
+        let mostrarCards = document.getElementById(`contenedorCards`);
+        mostrarCards.innerHTML = ``;
+        array.forEach((producto) => {
+            mostrarCards.innerHTML +=
+            `<div class="card-movie col-lg-2 col-md-6 mb-4 pb-5">
+                    <img class="cardImg" src=${producto.imagen} alt=""></>
+            </div>`;
+            })
+        }
 
-// Funciones
+    mostrarCards(productos);
 
 
-let filtrarGenero = (genero) => {
-    let filtroAccion = productos.filter (el => el.genero === genero)
-    console.log(filtroAccion);
-}
 
-let agregarAlCarrito = (precio) => {
-    totalCarrito += precio;
-    console.log(`El total del carrito es de $ ${totalCarrito}`);
-}
+
+    let agregarAlCarrito = (precio) => {
+        totalCarrito += precio;
+        console.log(`El total del carrito es de $ ${totalCarrito}`);
+    }
 
 let calcularCuotas= precio => {
     let cuotas = cantidadCuotas();
@@ -68,7 +58,6 @@ let cantidadCuotas = () =>{
     let cantidadCuotas = Number(prompt(`Ingrese la cantidad de cuotas (3, 6 o 12)`));
     return cantidadCuotas;
 }
-
 
 let calcularImpuestos = (cuotas, precio) => {
     let calcularImpuestos = 0 

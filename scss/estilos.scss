@@ -1,4 +1,4 @@
-
+$background-color:#141414;
 $color-letra: rgba(242,244,246,.9);
 
 *{
@@ -6,26 +6,28 @@ $color-letra: rgba(242,244,246,.9);
     margin: 0;
     font-family: 'Antonio', sans-serif;
     font-family: 'Montserrat', sans-serif;
+    outline: none;
 }
+
 body{
-    background-color: #0f171e;
+    background: $background-color;
 }
-
 //NAVBAR//
-
 .bg-dark{
-    background-color: #0f171e !important;
+    background-color: $background-color !important;
     .navBar-logo{
-        font-size: 26px;
+        font-size: 20px;
         color: $color-letra;
         padding-right: 10px;
     }
     .navbar-brand{
-        font-size: 23px;
+        font-size: 16px;
         color: $color-letra;
+        font-family:'Bebas Neue', cursive;
     }
     .dropdown-menu{
         background: #0f171e;
+        font-size: 15px;
         :hover{
             background:#0f171e ;
         }
@@ -42,6 +44,7 @@ body{
         border: .5px  $color-letra;
         outline: none;
         border-radius: none;
+        font-size: 15px;
     }
     .btn-iniciar{
         background: transparent;
@@ -50,6 +53,7 @@ body{
         color: $color-letra;
         font-weight: 500;;
         margin:10px, 0px;
+        font-size: 15px;
         a{
             color:$color-letra;
         }
@@ -61,6 +65,7 @@ body{
         color: $color-letra;
         font-weight: 500;;
         padding-right: 20px;
+        font-size: 15px;
     }
 }
 
@@ -82,40 +87,29 @@ body{
 
 
 .main-container{
-    .button-genero{
+    .menuFilterGenero{
+        margin-left: 20px;
         color: $color-letra;
-        font-size: 25px;
+        background-color:#0f171e;
+        padding: 5px;
         border: none;
-        background: transparent;
-        margin-left:20px;
-        padding-bottom: 30px;;
+        font-size: 15px;
     }
     .section-peliculas-title{
         color: white;
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 20px;
         padding-bottom: 20px;
     }
-    #productos{
-        .card{
+    #contenedorCards{
+        .card-movie{
             background: transparent;
             border: none;
             color: $color-letra;
-            .card-img-top{
+            .cardImg{
                 height:300px;
-            }
-            .card-body{
-                .card-title{
-                }
-                .button-card{
-                    display: flex;
-                    align-self: center;
-                    padding:10px;
-                    border: solid 1px $color-letra;
-                    background: transparent;
-                    color: $color-letra;
-                    outline: none;
-                }
+                width: 100%;
+                cursor: pointer;
             }
         }
     }

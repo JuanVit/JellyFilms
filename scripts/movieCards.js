@@ -1,3 +1,6 @@
+let acumulador = ``;
+let totalCarrito = 0;
+
 //Objetos
 class producto{
     constructor(nombre, precio, imagen, genero){
@@ -28,3 +31,44 @@ const productos = [productoUno, productoDos, productoTres];
         }
 
     mostrarCards(productos);
+
+
+
+
+    let agregarAlCarrito = (precio) => {
+        totalCarrito += precio;
+        console.log(`El total del carrito es de $ ${totalCarrito}`);
+    }
+
+let calcularCuotas= precio => {
+    let cuotas = cantidadCuotas();
+    let precioImpuesto = calcularImpuestos(cuotas, precio);
+    switch(cuotas){
+        case 3 : console.log(("Son 3 cuotas de $ ") + (precioImpuesto / 3));
+        break;
+        case 6 : console.log(("Son 6 cuotas de $ ") + (precioImpuesto / 6));
+        break;
+        case 12 : console.log(("Son 12 cuotas de $ ") + (precioImpuesto / 12));
+        break;
+        default: console.log(`No ha ingresado una cantidad de cuotas valida`)
+    }
+}
+
+let cantidadCuotas = () =>{
+    let cantidadCuotas = Number(prompt(`Ingrese la cantidad de cuotas (3, 6 o 12)`));
+    return cantidadCuotas;
+}
+
+let calcularImpuestos = (cuotas, precio) => {
+    let calcularImpuestos = 0 
+    if (cuotas == 3){
+        calcularImpuestos+= precio * 1.3;
+    }
+    else if (cuotas == 6){
+        calcularImpuestos+= precio * 1.4;
+    }
+    else{
+        calcularImpuestos+= precio * 1.5;
+    }
+    return calcularImpuestos;
+}

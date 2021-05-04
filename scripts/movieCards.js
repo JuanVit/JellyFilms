@@ -24,8 +24,13 @@ const productos = [productoUno, productoDos, productoTres];
         mostrarCards.innerHTML = ``;
         array.forEach((producto) => {
             mostrarCards.innerHTML +=
-            `<div class="card-movie col-lg-2 col-md-6 mb-4 pb-5">
-                    <img class="cardImg" src=${producto.imagen} alt=""></>
+            `<div class="col-12 col-md-2 px-1">
+            <div class="card card-movie">
+                <img src="${producto.imagen}" class="img-card" alt="..." height="250">
+                <div class="card-body">
+                    <button class="btn btn-primary">Agregar a Mi Lista</button>
+                </div>
+            </div>
             </div>`;
             })
         }

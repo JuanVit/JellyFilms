@@ -44,6 +44,16 @@ body {
     font-size: 15px; }
     .bg-dark .btn-iniciar a {
       color: rgba(242, 244, 246, 0.9); }
+  .bg-dark .userIconLogged {
+    font-size: 20px; }
+  .bg-dark .loggedButton {
+    background: transparent !important;
+    color: white;
+    border: none;
+    font-size: 18px; }
+  .bg-dark .loggedDropdown {
+    background: #141414;
+    color: white; }
   .bg-dark .btn-cerrar {
     background: transparent;
     border: none;
@@ -82,7 +92,3 @@ body {
   background: transparent;
   border: none;
   color: rgba(242, 244, 246, 0.9); }
-  .main-container #contenedorCards .card-movie .cardImg {
-    height: 300px;
-    width: 100%;
-    cursor: pointer; }

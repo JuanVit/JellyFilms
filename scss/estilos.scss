@@ -58,6 +58,19 @@ body{
             color:$color-letra;
         }
     }
+    .userIconLogged{
+        font-size: 20px;
+    }
+    .loggedButton{
+        background: transparent !important;
+        color: white;
+        border: none;
+        font-size: 18px;
+    }
+    .loggedDropdown{
+        background: $background-color;
+        color: white;
+    }
     .btn-cerrar{
         background: transparent;
         border: none;
@@ -106,11 +119,6 @@ body{
             background: transparent;
             border: none;
             color: $color-letra;
-            .cardImg{
-                height:300px;
-                width: 100%;
-                cursor: pointer;
-            }
         }
     }
 }

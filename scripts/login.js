@@ -4,7 +4,18 @@ let welcomeUser = () =>{
     password = localStorage.getItem(`password`);
     if((username != null) && (password != null)){
         let userLogged = document.getElementById(`usuarioLoggeado`);
-        userLogged.innerHTML = `<div class = "d-flex py-0"><i class="fas fa-user pr-2"></i><h1 class="pr-4 my-0" style="color: white; font-size: 16px"> ${username}</h1></div></div>`}
+        userLogged.innerHTML = `
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle loggedButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-circle mr-2 userIconLogged"></i>
+            ${username}
+            </button>
+            <div class="dropdown-menu loggedDropdown" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Mi lista</a>
+                <a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+                <a class="dropdown-item" href="#">Ayuda</a>
+            </div>
+        </div>`}
     }
 welcomeUser()   
 

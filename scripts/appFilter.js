@@ -4,16 +4,7 @@ class selector{
     this.value = value;
     }
 }
-
-const selectorUno = new selector(`Todos`, `todos`);
-const selectorDos = new selector(`Aventura`, `aventura`);
-const selectorTres = new selector(`Terror`, `terror`);
-const selectorCuatro = new selector(`Acción`, `accion`);
-const selectorCinco = new selector(`Drama`, `drama`);
-const selectorSeis = new selector(`Comedia`, `comedia`);
-const selectorSiete = new selector(`Suspenso`, `suspenso`);
-
-const selectores = [selectorUno, selectorDos, selectorTres, selectorCuatro, selectorCinco, selectorSeis, selectorSiete]
+const selectores = [new selector(`Todos`, `todos`), new selector(`Aventura`, `aventura`), new selector(`Terror`, `terror`), new selector(`Acción`, `accion`), new selector(`Drama`, `drama`), new selector(`Comedia`, `comedia`), new selector(`Suspenso`, `suspenso`)]
 
 const selectFiltro = document.getElementById(`genero`);
 

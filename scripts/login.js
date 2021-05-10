@@ -11,7 +11,7 @@ let welcomeUser = () =>{
             ${username}
             </button>
             <div class="dropdown-menu loggedDropdown" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#" onclick = "verMiLista()">Mi lista</a>
+                <a class="dropdown-item" href="#" onclick="verMiLista()">Mi lista</a>
                 <a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
                 <a class="dropdown-item" href="#">Ayuda</a>
             </div>

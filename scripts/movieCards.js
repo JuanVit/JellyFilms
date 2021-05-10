@@ -1,6 +1,6 @@
 let acumulador = ``;
 let totalCarrito = 0;
-
+const home = document.getElementsByTagName("body");
 //Objetos
 class producto{
     constructor(id, nombre, precio, imagen, genero){

@@ -1,7 +1,42 @@
 let acumulador = ``;
 let totalCarrito = 0;
 const home = document.getElementsByTagName("body");
+const containerCarousel = document.getElementById(`carousel-container`)
 //Objetos
+
+//CAROUSEL
+
+class carousel{
+    constructor(id, img){
+        this.id = id;
+        this.img = img;
+    }
+}
+
+
+const carouselPeliculas = [new carousel('Maya and the last Dragon', 'Imagenes/maya-banner.jpg'),
+        new carousel('Godzilla vs Kong', 'Imagenes/kong-banner.jpg'),
+        new carousel ('Mr Robot', 'Imagenes/mr-robot-banner.jpg')
+]
+
+let verCarousel = () =>{
+    carouselPeliculas.forEach((el) =>{
+        containerCarousel.innerHTML += `
+            <div class="carousel-item">
+                <img src="${el.img}" class="d-block w-100" alt="..." height="700">
+                <div class="carousel-caption d-none d-md-block carousel-info">
+                    <h5>${el.id}</h5>
+                    <button class="btn btn-primary btn-carousel">Reproducir</button>
+                </div>
+            </div>
+        `
+    } )
+
+    document.getElementsByClassName(`carousel-item`)[0].classList.add(`active`);   
+}
+
+verCarousel();
+
 class producto{
     constructor(id, nombre, precio, imagen, genero){
         this.id = id;

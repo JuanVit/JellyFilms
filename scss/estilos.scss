@@ -111,9 +111,8 @@ body{
 //CAROUSEL//
 
 .carousel-one{
-    .carousel-item{
+    #carousel-container{
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.075) , rgba(0, 0, 0, 0.89) );
-        background-blend-mode:color;
     }
     .carousel-info{
     color: white;
@@ -125,10 +124,14 @@ body{
     text-align: left;
     font-size: 20px;
     font-weight: bold;
-    opacity: .4;
     h5{
-        font-size: 50px;
-        font-weight: bold;
+        font-size: 70px;
+        font-weight: 700;
+        color: white;
+    }
+    .btn-carousel{
+        display: flex;
+        align-self: center;
     }
     }
 }
@@ -158,7 +161,6 @@ body{
             border: none;
             color: $color-letra;
             height: 200px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
             overflow: hidden;
             transition: all .5s;
             &:hover{
@@ -166,7 +168,7 @@ body{
                 transform: scale(1.2);
                 margin-left: 5px;
                 margin-right: 5px;
-
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
             }
             .img-container{
                 height: 200px;

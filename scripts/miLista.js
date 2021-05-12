@@ -1,6 +1,4 @@
 const miLista = [];
-
-
 let agregarLista = (id) =>{
     let agregarPelicula = productos.find(el => el.id == id);
     miLista.push(agregarPelicula);
@@ -25,11 +23,15 @@ miLista.forEach ((el) => {
     verLista.innerHTML += 
     `<div class="col-12 col-md-2 cards-peliculas">
         <div class="card card-movie">
-            <img src="${el.imagen}" class="img-card" alt="...">
-            lalala
+            <div class="img-container">
+                <img src="${el.imagen}" alt="...">
+            </div>
             <div class="card-body d-flex align-items-center">
                 <button type="button"  class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Quitar de Mi Lista" id= "quitarLista" onclick='quitarLista(${el.id})'><i class="fas fa-ban"></i></button>
             </div>
         </div>
     </div>` })
 }
+
+
+document.getElementById(`miListaNav`).addEventListener(`click`, verMiLista);

@@ -1,4 +1,4 @@
-$background-color:#141414;
+$background-color:#0f171e;;
 $color-letra: rgba(242,244,246,.9);
 
 *{
@@ -7,23 +7,22 @@ $color-letra: rgba(242,244,246,.9);
     font-family: 'Antonio', sans-serif;
     font-family: 'Montserrat', sans-serif;
     outline: none;
+    box-sizing: border-box;
 }
 
 body{
-    background: $background-color;
+    background: #0f171e;
 }
 //NAVBAR//
 .bg-dark{
     background-color: $background-color !important;
-    .navBar-logo{
+    .navbar-brand{
         font-size: 20px;
         color: $color-letra;
-        padding-right: 10px;
-    }
-    .navbar-brand{
-        font-size: 16px;
-        color: $color-letra;
         font-family:'Bebas Neue', cursive;
+    }
+    .nav-item{
+        font-size: 13px;
     }
     .dropdown-menu{
         background: #0f171e;
@@ -45,6 +44,10 @@ body{
         outline: none;
         border-radius: none;
         font-size: 15px;
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
     }
     .btn-iniciar{
         background: transparent;
@@ -54,6 +57,9 @@ body{
         font-weight: 500;;
         margin:10px, 0px;
         font-size: 15px;
+        &:focus{
+            outline: none !important;
+        }
         a{
             color:$color-letra;
         }
@@ -66,6 +72,10 @@ body{
         color: white;
         border: none;
         font-size: 18px;
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
     }
     .loggedDropdown{
         background: $background-color;
@@ -98,7 +108,32 @@ body{
         }
     }
 
+//CAROUSEL//
 
+.carousel-one{
+    .carousel-item{
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.075) , rgba(0, 0, 0, 0.89) );
+        background-blend-mode:color;
+    }
+    .carousel-info{
+    color: white;
+    position: absolute;
+    left: 1%;
+    top: 30%;
+    width: 30%;
+    margin-left: 100px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: .4;
+    h5{
+        font-size: 50px;
+        font-weight: bold;
+    }
+    }
+}
+
+// MAIN PELICULAS //
 .main-container{
     .menuFilterGenero{
         margin-left: 20px;
@@ -114,11 +149,55 @@ body{
         padding-left: 20px;
         padding-bottom: 20px;
     }
-    #contenedorCards{
+    .cards-peliculas{
+        margin-bottom: 60px;
         .card-movie{
+            padding-top: 5px;
+            padding-bottom: 5px;
             background: transparent;
             border: none;
             color: $color-letra;
+            height: 200px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            transition: all .5s;
+            &:hover{
+                height: 250px;
+                transform: scale(1.2);
+                margin-left: 5px;
+                margin-right: 5px;
+
+            }
+            .img-container{
+                height: 200px;
+                img{
+                    height: 200px;
+                    width: 100%;
+                }
+            }
+            .card-body{
+                height: 50px;
+                background-color: transparent;
+                border-radius: 18px 18px 18px 18px;
+                .btn-primary{
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                    &:focus{
+                        outline: none !important;
+                        box-shadow: none !important;
+                    }
+                    i{
+                        font-size: 18px;
+                        color: $color-letra;
+                        padding-right: 5px;
+                    }
+                }
+            }
         }
+
     }
 }
+    

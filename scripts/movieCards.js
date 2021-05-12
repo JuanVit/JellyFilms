@@ -22,14 +22,22 @@ const productos = [new producto(1, 'Spider-Man: Far From Home', 2000, `https://i
         mostrarCards.innerHTML = ``;
         array.forEach((producto) => {
             mostrarCards.innerHTML +=
-            `<div class="col-12 col-md-2 px-1">
+            `<div class="col-12 col-md-3 col-lg-2  cards-peliculas">
             <div class="card card-movie">
-                <img src="${producto.imagen}" class="img-card" alt="..." height="250">
-                <div class="card-body">
-                    <button id= "agrearMiLista" class="btn btn-primary" onclick='agregarLista(${producto.id})'>Agregar a Mi Lista</button>
+                <div class="img-container">
+                    <img src="${producto.imagen}" class="img-card" alt="..." >
+                </div>
+                <div class="card-body d-flex align-items-center">
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Reproducir"><i class="fas fa-play-circle"></i></button>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Agregar a Mi Lista" id="agrearMiLista" onclick='agregarLista(${producto.id})'><i class="fas fa-plus-circle"></i></i></button>
+                    
                 </div>
             </div>
             </div>`
             })
         }
     mostrarCards(productos);
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })

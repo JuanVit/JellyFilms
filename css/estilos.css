@@ -3,21 +3,20 @@
   margin: 0;
   font-family: 'Antonio', sans-serif;
   font-family: 'Montserrat', sans-serif;
-  outline: none; }
+  outline: none;
+  box-sizing: border-box; }
 
 body {
-  background: #141414; }
+  background: #0f171e; }
 
 .bg-dark {
-  background-color: #141414 !important; }
-  .bg-dark .navBar-logo {
+  background-color: #0f171e !important; }
+  .bg-dark .navbar-brand {
     font-size: 20px;
     color: rgba(242, 244, 246, 0.9);
-    padding-right: 10px; }
-  .bg-dark .navbar-brand {
-    font-size: 16px;
-    color: rgba(242, 244, 246, 0.9);
     font-family: 'Bebas Neue', cursive; }
+  .bg-dark .nav-item {
+    font-size: 13px; }
   .bg-dark .dropdown-menu {
     background: #0f171e;
     font-size: 15px; }
@@ -34,6 +33,9 @@ body {
     outline: none;
     border-radius: none;
     font-size: 15px; }
+    .bg-dark .searchBar:focus {
+      outline: none !important;
+      box-shadow: none !important; }
   .bg-dark .btn-iniciar {
     background: transparent;
     border: none;
@@ -42,6 +44,8 @@ body {
     font-weight: 500;
     margin: 10px, 0px;
     font-size: 15px; }
+    .bg-dark .btn-iniciar:focus {
+      outline: none !important; }
     .bg-dark .btn-iniciar a {
       color: rgba(242, 244, 246, 0.9); }
   .bg-dark .userIconLogged {
@@ -51,8 +55,11 @@ body {
     color: white;
     border: none;
     font-size: 18px; }
+    .bg-dark .loggedButton:focus {
+      outline: none !important;
+      box-shadow: none !important; }
   .bg-dark .loggedDropdown {
-    background: #141414;
+    background: #0f171e;
     color: white; }
   .bg-dark .btn-cerrar {
     background: transparent;
@@ -74,6 +81,25 @@ body {
     padding: 10px;
     margin-top: 20px; }
 
+.carousel-one .carousel-item {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.89));
+  background-blend-mode: color; }
+
+.carousel-one .carousel-info {
+  color: white;
+  position: absolute;
+  left: 1%;
+  top: 30%;
+  width: 30%;
+  margin-left: 100px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: .4; }
+  .carousel-one .carousel-info h5 {
+    font-size: 50px;
+    font-weight: bold; }
+
 .main-container .menuFilterGenero {
   margin-left: 20px;
   color: rgba(242, 244, 246, 0.9);
@@ -88,7 +114,42 @@ body {
   padding-left: 20px;
   padding-bottom: 20px; }
 
-.main-container #contenedorCards .card-movie {
-  background: transparent;
-  border: none;
-  color: rgba(242, 244, 246, 0.9); }
+.main-container .cards-peliculas {
+  margin-bottom: 60px; }
+  .main-container .cards-peliculas .card-movie {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: transparent;
+    border: none;
+    color: rgba(242, 244, 246, 0.9);
+    height: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transition: all .5s; }
+    .main-container .cards-peliculas .card-movie:hover {
+      height: 250px;
+      transform: scale(1.2);
+      margin-left: 5px;
+      margin-right: 5px; }
+    .main-container .cards-peliculas .card-movie .img-container {
+      height: 200px; }
+      .main-container .cards-peliculas .card-movie .img-container img {
+        height: 200px;
+        width: 100%; }
+    .main-container .cards-peliculas .card-movie .card-body {
+      height: 50px;
+      background-color: transparent;
+      border-radius: 18px 18px 18px 18px; }
+      .main-container .cards-peliculas .card-movie .card-body .btn-primary {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin: 0;
+        padding: 0; }
+        .main-container .cards-peliculas .card-movie .card-body .btn-primary:focus {
+          outline: none !important;
+          box-shadow: none !important; }
+        .main-container .cards-peliculas .card-movie .card-body .btn-primary i {
+          font-size: 18px;
+          color: rgba(242, 244, 246, 0.9);
+          padding-right: 5px; }

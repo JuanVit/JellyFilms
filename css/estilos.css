@@ -30,7 +30,7 @@ body {
   .bg-transparent .searchBar {
     background: transparent;
     color: rgba(242, 244, 246, 0.9);
-    border: 1px solid rgba(242, 244, 246, 0.9);
+    border: 0, 5px solid rgba(242, 244, 246, 0.9);
     outline: none;
     border-radius: 0px;
     font-size: 15px; }

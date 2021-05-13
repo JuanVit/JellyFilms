@@ -2,10 +2,26 @@ let acumulador = ``;
 let totalCarrito = 0;
 const home = document.getElementsByTagName("body");
 const containerCarousel = document.getElementById(`carousel-container`)
-//Objetos
+
+//NAVBAR SCROLL
+$(window).scroll(function(){
+    console.log(window.scrollY)
+    if(window.scrollY < 50){
+        $("#nav").removeClass(`bg-dark`);
+        $("#nav").addClass(`bg-transparent`);
+    }
+
+    else{
+        $(`#nav`).removeClass(`bg-transparent`);
+        $(`#nav`).addClass(`bg-dark`);
+    }
+})
+
+
+
+
 
 //CAROUSEL
-
 class carousel{
     constructor(id, img){
         this.id = id;
@@ -37,6 +53,7 @@ let verCarousel = () =>{
 
 verCarousel();
 
+//OBJETOS
 class producto{
     constructor(id, nombre, precio, imagen, genero){
         this.id = id;

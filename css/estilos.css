@@ -9,8 +9,70 @@
 body {
   background: #0f171e; }
 
+.bg-transparent {
+  background-color: transparent !important;
+  transition: 1s ease; }
+  .bg-transparent .navbar-brand {
+    font-size: 20px;
+    color: rgba(242, 244, 246, 0.9);
+    font-family: 'Bebas Neue', cursive; }
+  .bg-transparent .nav-item {
+    font-size: 13px; }
+  .bg-transparent .dropdown-menu {
+    background: #0f171e;
+    font-size: 15px; }
+    .bg-transparent .dropdown-menu :hover {
+      background: #0f171e; }
+    .bg-transparent .dropdown-menu .dropdown-item {
+      color: rgba(242, 244, 246, 0.9); }
+      .bg-transparent .dropdown-menu .dropdown-item :hover {
+        color: rgba(242, 244, 246, 0.9); }
+  .bg-transparent .searchBar {
+    background: transparent;
+    color: rgba(242, 244, 246, 0.9);
+    border: 1px solid rgba(242, 244, 246, 0.9);
+    outline: none;
+    border-radius: 0px;
+    font-size: 15px; }
+    .bg-transparent .searchBar:focus {
+      outline: none !important;
+      box-shadow: none !important; }
+  .bg-transparent .btn-iniciar {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(242, 244, 246, 0.9);
+    font-weight: 500;
+    margin: 10px, 0px;
+    font-size: 15px; }
+    .bg-transparent .btn-iniciar:focus {
+      outline: none !important; }
+    .bg-transparent .btn-iniciar a {
+      color: rgba(242, 244, 246, 0.9); }
+  .bg-transparent .userIconLogged {
+    font-size: 20px; }
+  .bg-transparent .loggedButton {
+    background: transparent !important;
+    color: white;
+    border: none;
+    font-size: 18px; }
+    .bg-transparent .loggedButton:focus {
+      box-shadow: none !important; }
+  .bg-transparent .loggedDropdown {
+    background: #0f171e;
+    color: white; }
+  .bg-transparent .btn-cerrar {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(242, 244, 246, 0.9);
+    font-weight: 500;
+    padding-right: 20px;
+    font-size: 15px; }
+
 .bg-dark {
-  background-color: #0f171e !important; }
+  background-color: #0f171e !important;
+  transition: 1s ease; }
   .bg-dark .navbar-brand {
     font-size: 20px;
     color: rgba(242, 244, 246, 0.9);

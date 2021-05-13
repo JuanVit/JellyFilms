@@ -14,8 +14,87 @@ body{
     background: #0f171e;
 }
 //NAVBAR//
+.bg-transparent{
+    background-color: transparent !important;
+    transition: 1s ease;
+    .navbar-brand{
+        font-size: 20px;
+        color: $color-letra;
+        font-family:'Bebas Neue', cursive;
+    }
+    .nav-item{
+        font-size: 13px;
+    }
+    .dropdown-menu{
+        background: #0f171e;
+        font-size: 15px;
+        :hover{
+            background:#0f171e ;
+        }
+        .dropdown-item{
+            color: $color-letra;
+            :hover{
+                color: $color-letra;
+            }
+        }
+    }
+    .searchBar{
+        background: transparent;
+        color: $color-letra;
+        border: 1px  solid $color-letra;
+        outline: none;
+        border-radius: 0px;
+        font-size: 15px;
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    .btn-iniciar{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $color-letra;
+        font-weight: 500;;
+        margin:10px, 0px;
+        font-size: 15px;
+        &:focus{
+            outline: none !important;
+        }
+        a{
+            color:$color-letra;
+        }
+    }
+    .userIconLogged{
+        font-size: 20px;
+    }
+    .loggedButton{
+        background: transparent !important;
+        color: white;
+        border: none;
+        font-size: 18px;
+        &:focus{
+            box-shadow: none !important;
+        }
+    }
+    .loggedDropdown{
+        background: $background-color;
+        color: white;
+    }
+    .btn-cerrar{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $color-letra;
+        font-weight: 500;;
+        padding-right: 20px;
+        font-size: 15px;
+    }
+}
+
 .bg-dark{
     background-color: $background-color !important;
+    transition: 1s ease;
     .navbar-brand{
         font-size: 20px;
         color: $color-letra;

@@ -30,9 +30,9 @@ class carousel{
 }
 
 
-const carouselPeliculas = [new carousel('Maya and the last Dragon', 'Imagenes/maya-banner.jpg'),
-        new carousel('Godzilla vs Kong', 'Imagenes/kong-banner.jpg'),
-        new carousel ('Mr Robot', 'Imagenes/mr-robot-banner.jpg')
+const carouselPeliculas = [new carousel('Maya and the Last Dragon', 'imagenes/maya-banner.jpg'),
+        new carousel('Godzilla vs Kong', 'imagenes/kong-banner.jpg'),
+        new carousel ('Mr. Robot', 'imagenes/mr-robot-banner.jpg')
 ]
 
 let verCarousel = () =>{

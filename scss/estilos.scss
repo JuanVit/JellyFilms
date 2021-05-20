@@ -16,7 +16,7 @@ body{
 //NAVBAR//
 .bg-transparent{
     background-color: transparent !important;
-    transition: 1s ease;
+    transition: 0.8s ease;
     .navbar-brand{
         font-size: 20px;
         color: $color-letra;
@@ -94,7 +94,7 @@ body{
 
 .bg-dark{
     background-color: $background-color !important;
-    transition: 1s ease;
+    transition: 0.8s ease;
     .navbar-brand{
         font-size: 20px;
         color: $color-letra;
@@ -232,22 +232,29 @@ body{
         padding-bottom: 20px;
     }
     .cards-peliculas{
-        margin-bottom: 60px;
+            padding-bottom: 150px;
+            padding-top: 150px;
         .card-movie{
-            padding-top: 5px;
-            padding-bottom: 5px;
-            background: transparent;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: $background-color;
             border: none;
             color: $color-letra;
             height: 200px;
             overflow: hidden;
-            transition: all .5s;
+            transition: all .2s;
+            position: absolute;
+            right: 0%;
+            left: 0%;
+            bottom: 0%;
+            top: 0%;
             &:hover{
                 height: 250px;
                 transform: scale(1.2);
                 margin-left: 5px;
                 margin-right: 5px;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+                z-index: 1;
             }
             .img-container{
                 height: 200px;
@@ -257,15 +264,11 @@ body{
                 }
             }
             .card-body{
-                height: 50px;
-                background-color: transparent;
-                border-radius: 18px 18px 18px 18px;
+                height: 150px;
                 .btn-primary{
                     background-color: transparent;
                     outline: none;
                     border: none;
-                    margin: 0;
-                    padding: 0;
                     &:focus{
                         outline: none !important;
                         box-shadow: none !important;

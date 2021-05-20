@@ -11,7 +11,7 @@ body {
 
 .bg-transparent {
   background-color: transparent !important;
-  transition: 1s ease; }
+  transition: 0.8s ease; }
   .bg-transparent .navbar-brand {
     font-size: 20px;
     color: rgba(242, 244, 246, 0.9);
@@ -72,7 +72,7 @@ body {
 
 .bg-dark {
   background-color: #0f171e !important;
-  transition: 1s ease; }
+  transition: 0.8s ease; }
   .bg-dark .navbar-brand {
     font-size: 20px;
     color: rgba(242, 244, 246, 0.9);
@@ -179,37 +179,40 @@ body {
   padding-bottom: 20px; }
 
 .main-container .cards-peliculas {
-  margin-bottom: 60px; }
+  padding-bottom: 150px;
+  padding-top: 150px; }
   .main-container .cards-peliculas .card-movie {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #0f171e;
     border: none;
     color: rgba(242, 244, 246, 0.9);
     height: 200px;
     overflow: hidden;
-    transition: all .5s; }
+    transition: all .2s;
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    bottom: 0%;
+    top: 0%; }
     .main-container .cards-peliculas .card-movie:hover {
       height: 250px;
       transform: scale(1.2);
       margin-left: 5px;
       margin-right: 5px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1; }
     .main-container .cards-peliculas .card-movie .img-container {
       height: 200px; }
       .main-container .cards-peliculas .card-movie .img-container img {
         height: 200px;
         width: 100%; }
     .main-container .cards-peliculas .card-movie .card-body {
-      height: 50px;
-      background-color: transparent;
-      border-radius: 18px 18px 18px 18px; }
+      height: 150px; }
       .main-container .cards-peliculas .card-movie .card-body .btn-primary {
         background-color: transparent;
         outline: none;
-        border: none;
-        margin: 0;
-        padding: 0; }
+        border: none; }
         .main-container .cards-peliculas .card-movie .card-body .btn-primary:focus {
           outline: none !important;
           box-shadow: none !important; }

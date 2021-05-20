@@ -14,15 +14,16 @@ const llamarApi = async (busqueda) =>{
 	let mostrarCards = document.getElementById(`contenedorCards`);
 	resultados.forEach(element => {
 		let img = element.imageurl;
-		console.log(img[0])
+		let title = element.title;
+		console.log(resultados)
 		mostrarCards.innerHTML+= `
 		<div class="col-12 col-md-3 col-lg-2 cards-peliculas">
             <div class="card card-movie">
                 <div class="img-container">
                     <img src="${img[0]}" class="img-card" alt="..." >
                 </div>
-                <div class="card-body d-flex align-items-center">
-                    <p class="movieTitle">${producto.nombre}</p>
+                <div class="card-body d-flex flex-column  align-items-center">
+                    <p class="movieTitle my-0">${title}</p>
                     <button type="button" class="btn btn-primary"><i class="fas fa-play-circle"></i></button>
                     <button type="button" class="btn btn-primary" id=agregarMiLista${producto.id} onclick='agregarLista(${producto.id})'><i class="fas fa-plus-circle"></i></i></button>
                     

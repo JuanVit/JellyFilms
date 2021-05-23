@@ -1,9 +1,10 @@
 const miLista = [];
-let agregarLista = (id) =>{
-    let agregarPelicula = productos.find(el => el.id == id);
+let agregarLista = (title) =>{
+    let agregarPelicula = peliculas.find(el => el == title);
     miLista.push(agregarPelicula);
-    let btnLista = document.getElementById(`agregarMiLista${id}`);
+    let btnLista = document.getElementById(`agregarMiLista(id${title})`);
     btnLista.remove();
+    console.log(miLista)
 }
 
 let quitarLista = (id) =>{

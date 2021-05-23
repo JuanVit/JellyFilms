@@ -44,14 +44,15 @@
             <a class="nav-link active" id="miListaNav" href="#" onclick="verMiLista()">Mi Lista</a>
           </li>
         </ul>
-        <form>
-          <input class="form-control mr-sm-2 searchBar" type="search" placeholder="Buscar" aria-label="Buscar">
+        <form id="formSearch">
+          <input id="search" class="form-control mr-sm-2 searchBar" type="search" placeholder="Buscar" aria-label="Buscar">
         </form>
         <button id="usuarioLoggeado" class="btn-iniciar mr-4 ml-4"><a  class="iniciarBtn text-decoration-none" href="loginPage.html">Iniciar Sesión</a></button>
       </div>
     </nav>
   </header>
 
+  
 
 
   <!-- Carousel -->
@@ -81,7 +82,6 @@
     </div>
   </div>
 
-
     <!-- Bootstrap -->
     <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" defer></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -93,5 +93,6 @@
     <script src="scripts/appFilter.js" defer></script>
     <script src="scripts/miLista.js" defer></script>
     <script src="scripts/api.js"></script>
+    <script src="scripts/showMovies.js"></script>
 </body>
 </html>

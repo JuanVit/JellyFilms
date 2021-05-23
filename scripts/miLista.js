@@ -1,6 +1,6 @@
 const miLista = [];
 let agregarLista = (title) =>{
-    let agregarPelicula = peliculas.find(el => el == title);
+    let agregarPelicula = peliculas.find(el => el.title == title);
     miLista.push(agregarPelicula);
     let btnLista = document.getElementById(`agregarMiLista(id${title})`);
     btnLista.remove();

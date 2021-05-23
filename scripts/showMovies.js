@@ -23,6 +23,7 @@ const showMovies = (data) => {
     data.forEach(movie => {
         peliculas.push()
         const {title, poster_path, realese_date, adult, original_lenguage} = movie;
+        if(title !== null & poster_path !== null)
         showCards.innerHTML+= `
 			<div class="col-12 col-md-3 col-lg-2 cards-peliculas">
 				<div class="card card-movie">
@@ -37,6 +38,7 @@ const showMovies = (data) => {
 					</div>
 				</div>
 				</div>`
+                console.log(movie)
     });
 }
 

@@ -51,7 +51,6 @@ formSearch.addEventListener('submit', (e)=>{
     }   else{
         callApi(api_url)
     }
-    
 })
 
 

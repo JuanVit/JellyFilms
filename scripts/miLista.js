@@ -1,8 +1,9 @@
 const miLista = [];
-let agregarLista = (title) =>{
-    let agregarPelicula = peliculas.find(el => el.title == title);
+let agregarLista = (id) =>{
+    console.log(id)
+    let agregarPelicula = peliculas.find(el => el.id == id);
     miLista.push(agregarPelicula);
-    let btnLista = document.getElementById(`agregarMiLista(id${title})`);
+    let btnLista = document.getElementById(`agregarMiLista(${id})`);
     btnLista.remove();
     console.log(miLista)
 }
@@ -29,9 +30,10 @@ miLista.forEach ((el) => {
     `<div class="col-12 col-md-2 cards-peliculas">
         <div class="card card-movie">
             <div class="img-container">
-                <img src="${el.imagen}" alt="...">
+                <img src="${img_url}${el.poster_path}" alt="...">
             </div>
             <div class="card-body d-flex align-items-center">
+                <h2>${el.title}</h2>
                 <button type="button"  class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Quitar de Mi Lista" id= "quitarLista" onclick='quitarLista(${el.id})'><i class="fas fa-ban"></i></button>
             </div>
         </div>

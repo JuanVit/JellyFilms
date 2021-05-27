@@ -21,7 +21,8 @@ callApi(api_url)
 const showMovies = (data) => {
     showCards.innerHTML =``;
     data.forEach(movie => {
-        peliculas.push()
+        const id = movie.id
+        peliculas.push(movie)
         const {title, poster_path, realese_date, adult, original_lenguage} = movie;
         if(title !== null & poster_path !== null)
         showCards.innerHTML+= `
@@ -33,12 +34,10 @@ const showMovies = (data) => {
 					<div class="card-body d-flex flex-column  align-items-center">
 						<p class="movieTitle my-0">${title}</p>
 						<button type="button" class="btn btn-primary"><i class="fas fa-play-circle"></i></button>
-						<button type="button" class="btn btn-primary" id=agregarMiLista(id${title}) onclick='agregarLista(${title})'><i class="fas fa-plus-circle"></i></i></button>
-						
+						<button type="button" class="btn btn-primary" id='agregarMiLista(${id})' onclick='agregarLista(${id})'><i class="fas fa-plus-circle"></i></i></button>				
 					</div>
 				</div>
-				</div>`
-                console.log(movie)
+				</div>`                
     });
 }
 

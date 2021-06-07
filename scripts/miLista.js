@@ -22,6 +22,7 @@ $("#carousel").remove();
 $(`#genero`).remove();
 let sectionTitle = document.getElementById(`sectionTitle`);
 sectionTitle.classList.add(`pt-5`);
+sectionTitle.classList.add(`pb-5`);
 document.getElementById(`sectionTitle`).innerHTML = `<strong>Mi Lista</strong>`;
 let verLista = document.getElementById(`contenedorCards`);
 verLista.innerHTML = ``;
@@ -32,8 +33,9 @@ miLista.forEach ((el) => {
             <div class="img-container">
                 <img src="${img_url}${el.poster_path}" alt="...">
             </div>
-            <div class="card-body d-flex align-items-center">
-                <h2>${el.title}</h2>
+            <div class="card-body d-flex flex-column">
+                <p>${el.title}</p>
+                <p></p>
                 <button type="button"  class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Quitar de Mi Lista" id= "quitarLista" onclick='quitarLista(${el.id})'><i class="fas fa-ban"></i></button>
             </div>
         </div>

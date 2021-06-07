@@ -40,7 +40,8 @@ const showMovies = (data) => {
 					<div class="card-body d-flex flex-column ">
 						<strong class="movieTitle my-0">${title}</strong>
                         <p class="mb-0">${date}</p>
-                        <p class="age">${age(adult)}</p>
+                        <p class="age mb-0">${age(adult)}</p>
+                        <p class="hd">HD</p>
                         <p class="movie-plot">${plot} ...</p>
 						<div class="d-flex flex-column">
 						<button type="button" class="" id='agregarMiLista(${id})' onclick='agregarLista(${id})'><i class="fas fa-plus"></i>Agregar a Mi Lista</button>

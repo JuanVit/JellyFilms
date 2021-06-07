@@ -150,8 +150,8 @@ body {
   color: white;
   position: absolute;
   left: 1%;
-  top: 30%;
-  width: 30%;
+  top: 20%;
+  width: 40%;
   margin-left: 100px;
   text-align: left;
   font-size: 20px;
@@ -160,6 +160,19 @@ body {
     font-size: 70px;
     font-weight: 700;
     color: white; }
+  .carousel-one .carousel-info .hd {
+    height: 80%;
+    margin-left: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 900;
+    color: black;
+    font-size: 15px;
+    background-color: #EDB709;
+    width: 30px; }
+  .carousel-one .carousel-info .carousel-plot {
+    font-size: 16px;
+    font-weight: 500; }
   .carousel-one .carousel-info .btn-carousel {
     display: flex;
     align-self: center; }
@@ -199,7 +212,7 @@ body {
         bottom: 0%;
         top: 0%; }
         .main-container #contenedorCards .cards-peliculas .card-movie:hover {
-          height: 450px;
+          height: 430px;
           transform: scale(1.2);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
           z-index: 1; }
@@ -209,12 +222,20 @@ body {
             height: 200px;
             width: 100%; }
         .main-container #contenedorCards .cards-peliculas .card-movie .card-body {
-          height: 250px;
+          height: 230px;
           padding-top: 30px; }
           .main-container #contenedorCards .cards-peliculas .card-movie .card-body .movie-plot {
             font-size: 12px; }
           .main-container #contenedorCards .cards-peliculas .card-movie .card-body .age {
             font-size: 10px; }
+          .main-container #contenedorCards .cards-peliculas .card-movie .card-body .hd {
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 900;
+            color: black;
+            font-size: 10px;
+            background-color: #EDB709;
+            width: 20px; }
           .main-container #contenedorCards .cards-peliculas .card-movie .card-body button {
             margin-bottom: 5px;
             width: 60%;

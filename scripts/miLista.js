@@ -38,7 +38,8 @@ miLista.forEach ((el) => {
             <div class="card-body d-flex flex-column">
                 <strong class="movieTitle my-0">${el.title}</strong>
                 <p class="mb-0">${date}</p>
-                <p class="age">${age(el.adult)}</p>
+                <p class="age mb-0">${age(el.adult)}</p>
+                <p class="hd">HD</p>
                 <p class="movie-plot">${plot} ...</p>
                 <button type="button"  class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Quitar de Mi Lista" id= "quitarLista" onclick='quitarLista(${el.id})'><i class="fas fa-ban"></i> Quitar de Mi Lista</button>
             </div>

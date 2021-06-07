@@ -23,18 +23,28 @@ const showMovies = (data) => {
     data.forEach(movie => {
         const id = movie.id
         peliculas.push(movie)
-        const {title, poster_path, realese_date, adult, original_lenguage} = movie;
+        console.log(movie)
+        const {title, poster_path, release_date, adult, overview, original_lenguage} = movie;
+        let dateArray = release_date.split("");
+        let date= (dateArray.splice(0, 4)).join(``)
+        let plotArray = overview.split(" ");
+        let plot= (plotArray.splice(0, 15)).join(` `)
+        console.log(plot)
         if(title !== null & poster_path !== null)
         showCards.innerHTML+= `
 			<div class="col-12 col-md-3 col-lg-2 cards-peliculas">
 				<div class="card card-movie">
 					<div class="img-container">
-						<img src=${img_url}${poster_path} class="img-card" alt=${title} >
+						<img src=${img_url}${poster_path} class="img-card" alt=${title}>
 					</div>
-					<div class="card-body d-flex flex-column  align-items-center">
-						<p class="movieTitle my-0">${title}</p>
-						<button type="button" class="btn btn-primary"><i class="fas fa-play-circle"></i></button>
-						<button type="button" class="btn btn-primary" id='agregarMiLista(${id})' onclick='agregarLista(${id})'><i class="fas fa-plus-circle"></i></i></button>				
+					<div class="card-body d-flex flex-column ">
+						<strong class="movieTitle my-0">${title}</strong>
+                        <p class="mb-0">${date}</p>
+                        <p class="age">${age(adult)}</p>
+                        <p class="movie-plot">${plot} ...</p>
+						<div class="d-flex flex-column">
+						<button type="button" class="" id='agregarMiLista(${id})' onclick='agregarLista(${id})'><i class="fas fa-plus"></i>Agregar a Mi Lista</button>
+                        </div>				
 					</div>
 				</div>
 				</div>`                
@@ -60,4 +70,11 @@ formSearch.addEventListener('submit', (e)=>{
     }
 })
 
+let age = (adult) =>{
+    if(adult){
+        return ` +18`
+    } else{
+        return ` +13`
+    }
+}
 

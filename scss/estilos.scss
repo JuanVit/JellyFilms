@@ -232,7 +232,9 @@ body{
         padding-left: 20px;
         padding-bottom: 20px;
     }
-    .cards-peliculas{
+    #contenedorCards{
+        margin-bottom: 200px;
+        .cards-peliculas{
             padding-bottom: 150px;
             padding-top: 150px;
         .card-movie{
@@ -251,7 +253,7 @@ body{
             bottom: 0%;
             top: 0%;
             &:hover{
-                height: 400px;
+                height: 450px;
                 transform: scale(1.2);
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
                 z-index: 1;
@@ -264,21 +266,33 @@ body{
                 }
             }
             .card-body{
-                height: 200px;
+                height: 250px;
                 padding-top: 30px;
-                
-                .btn-primary{
-                    background-color: transparent;
+                .movie-plot{
+                    font-size: 12px;
+                }
+                .age{
+                    font-size: 10px;
+                }
+                button{
+                    margin-bottom: 5px;
+                    width: 60%;
+                    font-size: 12px;
+                    color: $color-letra;
+                    background-color: $background-color;
                     outline: none;
-                    border: none;
+                    border: solid 1px $color-letra;
+                    border-radius: 10px;
+                    padding: 0px;
                     &:focus{
                         outline: none !important;
                         box-shadow: none !important;
                     }
                     i{
-                        font-size: 18px;
+                        margin-right: 4px;
+                        font-size: 10px;
                         color: $color-letra;
-                        padding-right: 5px;
+                        }
                     }
                 }
             }

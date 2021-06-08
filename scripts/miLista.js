@@ -20,7 +20,7 @@ $("#carousel").remove();
 $(`#genero`).remove();
 let sectionTitle = document.getElementById(`sectionTitle`);
 sectionTitle.classList.add(`pt-5`);
-sectionTitle.classList.add(`pb-5`);
+sectionTitle.classList.add(`mt-5`);
 document.getElementById(`sectionTitle`).innerHTML = `<strong>Mi Lista</strong>`;
 let verLista = document.getElementById(`contenedorCards`);
 verLista.innerHTML = ``;

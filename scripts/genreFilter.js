@@ -99,7 +99,7 @@ const showMovieSection = ()  =>{
         let aux= document.createElement('button');
         aux.classList.add('btn-filter')
         aux.innerHTML=`${genre.name}`;
-        document.getElementById(`genreSelect`).appendChild(aux)
+        document.getElementById('genreSelect').appendChild(aux)
         aux.addEventListener('click', () =>{
             callApi(`${api_url}&with_genres=${encodeURI(genre.id)}`)
             }

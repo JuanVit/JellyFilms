@@ -191,6 +191,23 @@ body {
     font-size: 16px;
     padding-left: 20px;
     padding-bottom: 20px; }
+    .main-container .section-peliculas-title .btn-filter {
+      border-radius: 12px;
+      color: rgba(242, 244, 246, 0.9);
+      margin: 2px 8px;
+      border: 1px solid rgba(242, 244, 246, 0.9);
+      background: transparent;
+      padding: 10px; }
+      .main-container .section-peliculas-title .btn-filter:hover {
+        font-weight: bold;
+        color: black;
+        background: #EDB709;
+        border: 1px solid transparent; }
+      .main-container .section-peliculas-title .btn-filter:focus {
+        font-weight: bold;
+        color: black;
+        background: #EDB709;
+        border: 1px solid transparent; }
   .main-container #contenedorCards {
     margin-bottom: 200px; }
     .main-container #contenedorCards .cards-peliculas {

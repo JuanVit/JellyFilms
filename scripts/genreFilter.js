@@ -85,25 +85,24 @@ sectionPeliculas.addEventListener('click', () =>{
     showMovieSection()
 })
 const selectedGenre = []
-
 const showMovieSection = ()  =>{
     console.log(genres)
     let carousel = document.getElementById('carousel');
-    carousel.remove();
+    if(carousel){
+        carousel.remove();
+    }
+    callApi(api_url)
     let genreTitle = document.getElementById('sectionTitle');
     genreTitle.classList.add('pt-5', 'mt-5');
     genreTitle.innerHTML='<div class="d-flex flex-column"><strong>Buscar por Género:</strong> <div id="genreSelect" class="mt-2"></div></div>'
     genres.genres.forEach(genre => {
         let aux= document.createElement('button');
+        aux.classList.add('btn-filter')
         aux.innerHTML=`${genre.name}`;
-        aux.setAttribute('id', 'btnGenre')
         document.getElementById(`genreSelect`).appendChild(aux)
         aux.addEventListener('click', () =>{
-            prueba(genre.id)
+            callApi(`${api_url}&with_genres=${encodeURI(genre.id)}`)
             }
         )
     });
-}
-const prueba = (id) =>{
-    console.log(id)
 }

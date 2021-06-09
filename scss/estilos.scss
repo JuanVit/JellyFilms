@@ -246,6 +246,26 @@ body{
         font-size: 16px;
         padding-left: 20px;
         padding-bottom: 20px;
+        .btn-filter{
+            border-radius: 12px;
+            color: $color-letra;
+            margin: 2px 8px;
+            border: 1px solid $color-letra;
+            background: transparent;
+            padding: 10px;
+            &:hover{
+                font-weight: bold;
+                color: black;
+                background: #EDB709;
+                border:1px solid transparent;
+            }
+            &:focus{
+                font-weight: bold;
+                color: black;
+                background: #EDB709;
+                border: 1px solid transparent;
+            }
+        }
     }
     #contenedorCards{
         margin-bottom: 200px;

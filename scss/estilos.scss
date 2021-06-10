@@ -1,0 +1,381 @@
+$background-color:#0f171e;;
+$color-letra: rgba(242,244,246,.9);
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Antonio', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0f171e;
+}
+//NAVBAR//
+.bg-transparent{
+    background-color: transparent !important;
+    transition: 0.8s ease;
+    .navbar-brand{
+        font-size: 20px;
+        color: $color-letra;
+        font-family:'Bebas Neue', cursive;
+    }
+    .nav-item{
+        font-size: 13px;
+    }
+    .dropdown-menu{
+        background: #0f171e;
+        font-size: 15px;
+        :hover{
+            background:#0f171e ;
+        }
+        .dropdown-item{
+            color: $color-letra;
+            :hover{
+                color: $color-letra;
+            }
+        }
+    }
+    .searchBar{
+        background: transparent;
+        color: $color-letra;
+        border: 0,5px  solid $color-letra;
+        outline: none;
+        border-radius: 0px;
+        font-size: 15px;
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    .btn-iniciar{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $color-letra;
+        font-weight: 500;;
+        margin:10px, 0px;
+        font-size: 15px;
+        &:focus{
+            outline: none !important;
+        }
+        a{
+            color:$color-letra;
+        }
+    }
+    .userIconLogged{
+        font-size: 20px;
+    }
+    .loggedButton{
+        background: transparent !important;
+        color: white;
+        border: none;
+        font-size: 18px;
+        &:focus{
+            box-shadow: none !important;
+        }
+    }
+    .loggedDropdown{
+        background: $background-color;
+        color: white;
+    }
+    .btn-cerrar{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $color-letra;
+        font-weight: 500;;
+        padding-right: 20px;
+        font-size: 15px;
+    }
+}
+
+.bg-dark{
+    background-color: $background-color !important;
+    transition: 0.8s ease;
+    .navbar-brand{
+        font-size: 20px;
+        color: $color-letra;
+        font-family:'Bebas Neue', cursive;
+    }
+    .nav-item{
+        font-size: 13px;
+    }
+    .dropdown-menu{
+        background: #0f171e;
+        font-size: 15px;
+        :hover{
+            background:#0f171e ;
+        }
+        .dropdown-item{
+            color: $color-letra;
+            :hover{
+                color: $color-letra;
+            }
+        }
+    }
+    .searchBar{
+        background: transparent;
+        color: $color-letra;
+        border: .5px  $color-letra;
+        outline: none;
+        border-radius: none;
+        font-size: 15px;
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    .btn-iniciar{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $color-letra;
+        font-weight: 500;;
+        margin:10px, 0px;
+        font-size: 15px;
+        &:focus{
+            outline: none !important;
+        }
+        a{
+            color:$color-letra;
+        }
+    }
+    .userIconLogged{
+        font-size: 20px;
+    }
+    .loggedButton{
+        background: transparent !important;
+        color: white;
+        border: none;
+        font-size: 18px;
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    .loggedDropdown{
+        background: $background-color;
+        color: white;
+    }
+    .btn-cerrar{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $color-letra;
+        font-weight: 500;;
+        padding-right: 20px;
+        font-size: 15px;
+    }
+}
+
+// LOGIN FORM //
+
+    .loginForm{
+        margin-top: 100px;
+        padding: 20px;
+        .formInput{
+            padding: 10px;
+            margin: 10px;
+            border: none;
+        }
+        .formSubmit{
+            padding:10px;
+            margin-top: 20px;
+        }
+    }
+
+//CAROUSEL//
+
+.carousel-one{
+    #carousel-container{
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.075) , rgba(0, 0, 0, 0.89) );
+    }
+    .carousel-info{
+    color: white;
+    position: absolute;
+    left: 1%;
+    top: 20%;
+    width: 40%;
+    margin-left: 100px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    h5{
+        font-size: 70px;
+        font-weight: 700;
+        color: white;
+    }
+    .hd{
+        height: 80%;
+        margin-left: 10px;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: 900;
+        color: black;
+        font-size: 15px;
+        background-color: #EDB709;
+        width: 30px;
+    }
+    .carousel-plot{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .btn-carousel{
+        display: flex;
+        align-self: center;
+        }
+    }
+}
+
+// MAIN PELICULAS //
+.main-container{
+    overflow: hidden;
+    .menuFilterGenero{
+        margin-left: 20px;
+        color: $color-letra;
+        background-color:#0f171e;
+        padding: 5px;
+        border: none;
+        font-size: 15px;
+    }
+    .section-peliculas-title{
+        color: white;
+        font-size: 16px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        .btn-filter{
+            border-radius: 12px;
+            color: $color-letra;
+            margin: 2px 8px;
+            border: 1px solid $color-letra;
+            background: transparent;
+            padding: 10px;
+            &:hover{
+                font-weight: bold;
+                color: black;
+                background: #EDB709;
+                border:1px solid transparent;
+            }
+            &:focus{
+                font-weight: bold;
+                color: black;
+                background: #EDB709;
+                border: 1px solid transparent;
+            }
+        }
+    }
+    #contenedorCards{
+        margin-bottom: 200px;
+        .cards-peliculas{
+            padding-bottom: 150px;
+            padding-top: 150px;
+        .card-movie{
+            border-radius: 1%;
+            margin-right: 5px;
+            margin-left: 5px;
+            background-color: $background-color;
+            border: none;
+            color: $color-letra;
+            height: 200px;
+            overflow: hidden;
+            transition: all .3s;
+            position: absolute;
+            right: 0%;
+            left: 0%;
+            bottom: 0%;
+            top: 0%;
+            &:hover{
+                height: 450px;
+                transform: scale(1.2);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+            .img-container{
+                height: 200px;
+                img{
+                    height: 200px;
+                    width: 100%;
+                }
+            }
+            .card-body{
+                height: 250px;
+                padding-top: 30px;
+                .movie-plot{
+                    font-size: 12px;
+                }
+                .age{
+                    font-size: 10px;
+                }
+                .hd{
+                    border-radius: 4px;
+                    text-align: center;
+                    font-weight: 900;
+                    color: black;
+                    font-size: 10px;
+                    background-color: #EDB709;
+                    width: 20px;
+                }
+                button{
+                    margin-bottom: 5px;
+                    width: 60%;
+                    font-size: 12px;
+                    color: $color-letra;
+                    background-color: $background-color;
+                    outline: none;
+                    border: solid 1px $color-letra;
+                    border-radius: 10px;
+                    padding: 0px;
+                    &:focus{
+                        outline: none !important;
+                        box-shadow: none !important;
+                    }
+                    i{
+                        margin-right: 4px;
+                        font-size: 10px;
+                        color: $color-letra;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// LOGIN FORM
+
+.loginForm{
+    margin-top: 250px;
+    position: relative;
+    .img-form{
+        position: absolute;
+        top:-190px ;
+    }
+    .formBox{
+        border: 1px solid rgba($color: #EDB709, $alpha: .2);
+        border-top: none;
+        border-radius: 30px;
+        padding: 10% 5%;
+        .formInput{
+            color: #EDB709;
+            background: transparent;
+            border-bottom: 1px solid rgba($color-letra, $alpha: .2);
+            &:focus{
+                color: $color-letra;
+            }
+        }
+        .formSubmit{
+            font-size: 18px;
+            color:rgba($color-letra, $alpha: .4);
+            border:1px solid rgba($color-letra, $alpha: .2);
+            border-radius: 15px;
+            background: transparent;
+            &:hover{
+                border:1px solid #EDB709;
+                color: rgba($color-letra, $alpha: 1);
+            }
+        }
+    }
+}

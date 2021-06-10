@@ -1,9 +1,9 @@
 
 let welcomeUser = () =>{
-    username = localStorage.getItem(`username`);
-    password = localStorage.getItem(`password`);
+    username = localStorage.getItem('username');
+    password = localStorage.getItem('password');
     if((username != null) && (password != null)){
-        let userLogged = document.getElementById(`usuarioLoggeado`);
+        let userLogged = document.getElementById('usuarioLoggeado');
         userLogged.innerHTML = `
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle loggedButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -20,11 +20,11 @@ let welcomeUser = () =>{
 welcomeUser()   
 
 let ingresarUsuario = () => {
-    let username = document.getElementById(`inputUsuario`).value;
-    let password = document.getElementById(`inputPassword`).value;
-    if((username != null && password != null) && (username != `` && password != ``)){
-        localStorage.setItem(`username`, username);
-        localStorage.setItem(`password`, password);
+    let username = document.getElementById('inputUsuario').value;
+    let password = document.getElementById('inputPassword').value;
+    if((username != null && password != null) && (username != '' && password != '')){
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
         backIndex()
     } else {
         alert(`No ha ingresado los datos correctamente`)
@@ -36,8 +36,8 @@ let backIndex = () =>{
 }
 
 let cerrarSesion = () =>{
-    localStorage.removeItem(`password`);
-    localStorage.removeItem(`username`);
+    localStorage.removeItem('password');
+    localStorage.removeItem('username');
     location.reload();
 }
 

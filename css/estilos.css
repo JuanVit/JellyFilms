@@ -214,7 +214,7 @@ body {
       padding-bottom: 150px;
       padding-top: 150px; }
       .main-container #contenedorCards .cards-peliculas .card-movie {
-        border-radius: 0%;
+        border-radius: 1%;
         margin-right: 5px;
         margin-left: 5px;
         background-color: #0f171e;
@@ -229,7 +229,7 @@ body {
         bottom: 0%;
         top: 0%; }
         .main-container #contenedorCards .cards-peliculas .card-movie:hover {
-          height: 430px;
+          height: 450px;
           transform: scale(1.2);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
           z-index: 1; }
@@ -239,7 +239,7 @@ body {
             height: 200px;
             width: 100%; }
         .main-container #contenedorCards .cards-peliculas .card-movie .card-body {
-          height: 230px;
+          height: 250px;
           padding-top: 30px; }
           .main-container #contenedorCards .cards-peliculas .card-movie .card-body .movie-plot {
             font-size: 12px; }
@@ -270,3 +270,30 @@ body {
               margin-right: 4px;
               font-size: 10px;
               color: rgba(242, 244, 246, 0.9); }
+
+.loginForm {
+  margin-top: 250px;
+  position: relative; }
+  .loginForm .img-form {
+    position: absolute;
+    top: -190px; }
+  .loginForm .formBox {
+    border: 1px solid rgba(237, 183, 9, 0.2);
+    border-top: none;
+    border-radius: 30px;
+    padding: 10% 5%; }
+    .loginForm .formBox .formInput {
+      color: #EDB709;
+      background: transparent;
+      border-bottom: 1px solid rgba(242, 244, 246, 0.2); }
+      .loginForm .formBox .formInput:focus {
+        color: rgba(242, 244, 246, 0.9); }
+    .loginForm .formBox .formSubmit {
+      font-size: 18px;
+      color: rgba(242, 244, 246, 0.4);
+      border: 1px solid rgba(242, 244, 246, 0.9);
+      border-radius: 15px;
+      background: transparent; }
+      .loginForm .formBox .formSubmit:hover {
+        border: 1px solid #EDB709;
+        color: #f2f4f6; }

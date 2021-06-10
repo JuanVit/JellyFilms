@@ -3,10 +3,10 @@ const base_url = `https://api.themoviedb.org/3`;
 const api_url = `${base_url}/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&${api_key}`;
 const img_url = `https://image.tmdb.org/t/p/w300`;
 const search_url = `${base_url}/search/movie?${api_key}`
-const showCards = document.getElementById(`contenedorCards`);
+const showCards = document.getElementById('contenedorCards');
 const peliculas = [];
-const formSearch = document.getElementById(`formSearch`)
-const search = document.getElementById(`search`)
+const formSearch = document.getElementById('formSearch')
+const search = document.getElementById('search')
 
 console.log(search.value)
 const callApi = (url) =>{
@@ -30,7 +30,7 @@ const showMovies = (data) => {
         let plotArray = overview.split(" ");
         let plot= (plotArray.splice(0, 15)).join(` `)
         console.log(plot)
-        if(title !== null & poster_path !== null)
+        if(title !== null && poster_path !== null)
         showCards.innerHTML+= `
 			<div class="col-12 col-md-3 col-lg-2 cards-peliculas">
 				<div class="card card-movie">
@@ -52,29 +52,29 @@ const showMovies = (data) => {
     });
 }
 
-formSearch.addEventListener('submit', (e)=>{
+formSearch.addEventListener('input', (e)=>{
     e.preventDefault();
     const searchKey = search.value
-    if(searchKey !== null & searchKey !== ``){
-        $("#carousel").hide();
-        $(`#sectionTitle`).show();
-        document.getElementById(`sectionTitle`).innerHTML = `<strong>Resultados de la búsqueda "${searchKey}": </strong>`;
-        sectionTitle.classList.add(`mt-5`);
-        sectionTitle.classList.add(`pt-5`);
+    if(searchKey !== null && searchKey !== ``){
+        $('#carousel').hide();
+        $('#sectionTitle').show();
+        document.getElementById('sectionTitle').innerHTML = `<strong>Resultados de la búsqueda "${searchKey}": </strong>`;
+        sectionTitle.classList.add('mt-5');
+        sectionTitle.classList.add('pt-5');
         callApi(`${search_url}&query=${searchKey}`)
     }   else{
-        $("#carousel").show(1);
-        $(`#genero`).show(1);
-        $(`#sectionTitle`).hide()
+        $('#carousel').show(1);
+        $('#genero').show(1);
+        $('#sectionTitle').hide()
         callApi(api_url)
     }
 })
 
 let age = (adult) =>{
     if(adult){
-        return ` +18`
+        return '+18'
     } else{
-        return ` +13`
+        return '+13'
     }
 }
 

@@ -273,7 +273,7 @@ body{
             padding-bottom: 150px;
             padding-top: 150px;
         .card-movie{
-            border-radius: 0%;
+            border-radius: 1%;
             margin-right: 5px;
             margin-left: 5px;
             background-color: $background-color;
@@ -288,7 +288,7 @@ body{
             bottom: 0%;
             top: 0%;
             &:hover{
-                height: 430px;
+                height: 450px;
                 transform: scale(1.2);
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
                 z-index: 1;
@@ -301,7 +301,7 @@ body{
                 }
             }
             .card-body{
-                height: 230px;
+                height: 250px;
                 padding-top: 30px;
                 .movie-plot{
                     font-size: 12px;
@@ -339,6 +339,42 @@ body{
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+// LOGIN FORM
+
+.loginForm{
+    margin-top: 250px;
+    position: relative;
+    .img-form{
+        position: absolute;
+        top:-190px ;
+    }
+    .formBox{
+        border: 1px solid rgba($color: #EDB709, $alpha: .2);
+        border-top: none;
+        border-radius: 30px;
+        padding: 10% 5%;
+        .formInput{
+            color: #EDB709;
+            background: transparent;
+            border-bottom: 1px solid rgba($color-letra, $alpha: .2);
+            &:focus{
+                color: $color-letra;
+            }
+        }
+        .formSubmit{
+            font-size: 18px;
+            color:rgba($color-letra, $alpha: .4);
+            border:1px solid $color-letra;
+            border-radius: 15px;
+            background: transparent;
+            &:hover{
+                border:1px solid #EDB709;
+                color: rgba($color-letra, $alpha: 1);
             }
         }
     }

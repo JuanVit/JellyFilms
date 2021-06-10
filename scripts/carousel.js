@@ -1,18 +1,16 @@
-let acumulador = ``;
-let totalCarrito = 0;
 const home = document.getElementsByTagName("body");
 const containerCarousel = document.getElementById(`carousel-container`)
 
 //NAVBAR SCROLL
 $(window).scroll(function(){
     if(window.scrollY == 0 ){
-        $("#nav").removeClass(`bg-dark`);
-        $("#nav").addClass(`bg-transparent`);
+        $('#nav').removeClass('bg-dark');
+        $('#nav').addClass('bg-transparent');
     }
 
     else{
-        $(`#nav`).removeClass(`bg-transparent`);
-        $(`#nav`).addClass(`bg-dark`);
+        $('#nav').removeClass('bg-transparent');
+        $('#nav').addClass('bg-dark');
     }
 })
 
@@ -50,7 +48,7 @@ let verCarousel = () =>{
         `
     } )
 
-    document.getElementsByClassName(`carousel-item`)[0].classList.add(`active`);   
+    document.getElementsByClassName('carousel-item')[0].classList.add('active');   
 }
 
 verCarousel();

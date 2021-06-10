@@ -94,7 +94,7 @@ const showMovieSection = ()  =>{
     callApi(api_url)
     let genreTitle = document.getElementById('sectionTitle');
     genreTitle.classList.add('pt-5', 'mt-5');
-    genreTitle.innerHTML='<div class="d-flex flex-column"><strong>Buscar por Género:</strong> <div id="genreSelect" class="mt-2"></div></div>'
+    genreTitle.innerHTML='<div class="d-flex flex-column"><strong class="mb-4">Buscar por Género:</strong> <div id="genreSelect" class="mt-2"></div></div>'
     genres.genres.forEach(genre => {
         let aux= document.createElement('button');
         aux.classList.add('btn-filter')

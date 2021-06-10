@@ -55,7 +55,7 @@ const showMovies = (data) => {
 formSearch.addEventListener('input', (e)=>{
     e.preventDefault();
     const searchKey = search.value
-    if(searchKey !== null && searchKey !== ``){
+    if(searchKey !== null & searchKey !== ``){
         $('#carousel').hide();
         $('#sectionTitle').show();
         document.getElementById('sectionTitle').innerHTML = `<strong>Resultados de la búsqueda "${searchKey}": </strong>`;
@@ -64,8 +64,9 @@ formSearch.addEventListener('input', (e)=>{
         callApi(`${search_url}&query=${searchKey}`)
     }   else{
         $('#carousel').show(1);
-        $('#genero').show(1);
-        $('#sectionTitle').hide()
+        document.getElementById('sectionTitle').innerHTML = `<strong>Películas</strong>`
+        sectionTitle.classList.remove('mt-5');
+        sectionTitle.classList.remove('pt-5');
         callApi(api_url)
     }
 })

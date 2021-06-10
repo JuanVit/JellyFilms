@@ -369,7 +369,7 @@ body{
         .formSubmit{
             font-size: 18px;
             color:rgba($color-letra, $alpha: .4);
-            border:1px solid $color-letra;
+            border:1px solid rgba($color-letra, $alpha: .2);
             border-radius: 15px;
             background: transparent;
             &:hover{

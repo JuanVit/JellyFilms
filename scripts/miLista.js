@@ -16,7 +16,7 @@ let quitarLista = (id) =>{
 }
 
 let verMiLista = () =>{
-$("#carousel").remove();
+$("#carousel").hide();
 let sectionTitle = document.getElementById('sectionTitle');
 sectionTitle.classList.add('pt-5');
 sectionTitle.classList.add('mt-5');

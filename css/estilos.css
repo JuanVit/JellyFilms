@@ -291,7 +291,7 @@ body {
     .loginForm .formBox .formSubmit {
       font-size: 18px;
       color: rgba(242, 244, 246, 0.4);
-      border: 1px solid rgba(242, 244, 246, 0.9);
+      border: 1px solid rgba(242, 244, 246, 0.2);
       border-radius: 15px;
       background: transparent; }
       .loginForm .formBox .formSubmit:hover {

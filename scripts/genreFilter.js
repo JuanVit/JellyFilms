@@ -89,7 +89,7 @@ const showMovieSection = ()  =>{
     console.log(genres)
     let carousel = document.getElementById('carousel');
     if(carousel){
-        carousel.remove();
+        $('#carousel').hide();
     }
     callApi(api_url)
     let genreTitle = document.getElementById('sectionTitle');

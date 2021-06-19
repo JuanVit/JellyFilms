@@ -11,7 +11,6 @@ let quitarLista = (id) =>{
     let indice = miLista.indexOf(quitarElemento);
 
     miLista.splice(indice, 1)
-    console.log(miLista);
     verMiLista();
 }
 

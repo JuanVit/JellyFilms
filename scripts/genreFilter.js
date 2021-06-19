@@ -86,7 +86,6 @@ sectionPeliculas.addEventListener('click', () =>{
 })
 const selectedGenre = []
 const showMovieSection = ()  =>{
-    console.log(genres)
     let carousel = document.getElementById('carousel');
     if(carousel){
         $('#carousel').hide();

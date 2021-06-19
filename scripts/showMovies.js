@@ -23,13 +23,11 @@ const showMovies = (data) => {
     data.forEach(movie => {
         const id = movie.id
         peliculas.push(movie)
-        console.log(movie)
         const {title, poster_path, release_date, adult, overview, original_lenguage} = movie;
         let dateArray = release_date.split("");
         let date= (dateArray.splice(0, 4)).join(``)
         let plotArray = overview.split(" ");
         let plot= (plotArray.splice(0, 15)).join(` `)
-        console.log(plot)
         if(title !== null && poster_path !== null)
         showCards.innerHTML+= `
 			<div class="col-12 col-md-3 col-lg-2 cards-peliculas">
